@@ -13,17 +13,17 @@ spring:
     proxy-target-class: true
     auto: true
   rabbitmq:
-    host: cloud-mq-rabbit
+    host: paascloud-mq-rabbit
     port: 5672
     username: guest
     password: guest
   redis:
-    host: cloud-db-redis
-    password: cloud@redis
+    host: paascloud-db-redis
+    password: paascloud@redis
     port: 6379
     timeout: 0
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     filters: stat,wall
     druid:
       initial-size: 50
@@ -100,7 +100,7 @@ hystrix:
             timeoutInMilliseconds: 20000
 
 info:
-  软件著作权: cloud快速搭建企业级分布式微服务平台
+  软件著作权: paascloud快速搭建企业级分布式微服务平台
   著作登记号: 2018SR320076
   关于我们: http://paascloud.net
 
@@ -114,7 +114,7 @@ paascloud:
       accessKeyId: 'your aliyun accessKeyId'
       accessKeySecret: 'your aliyun accessKeySecret'
     rocketMq:
-      namesrvAddr: cloud-mq-rocket:9876
+      namesrvAddr: paascloud-mq-rocket:9876
     sms:
       signName: 快乐学习网
       regionId: cn-beijing
@@ -136,4 +136,4 @@ paascloud:
       pcPath: /data/file/qrCode/alipay
       qiniuPath: alipay/QRCode/
   zk:
-    zkAddressList: cloud-provider-zk:2181
+    zkAddressList: paascloud-provider-zk:2181
